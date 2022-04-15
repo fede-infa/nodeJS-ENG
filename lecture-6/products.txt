@@ -1,0 +1,14 @@
+[
+	{
+		"title": "Mouse",
+		"price": 40,
+		"thumbnail": "photo.jpg",
+		"id": 1
+	},
+	{
+		"title": "Phone",
+		"price": 120,
+		"thumbnail": "photo.jpg",
+		"id": 2
+	}
+]
