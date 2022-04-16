@@ -1,0 +1,15 @@
+{
+  "name": "lecture-7",
+  "version": "1.0.0",
+  "description": "- NPM commands\r - Package.json\r - Dependencies\r - Express server",
+  "main": "00-packageManager.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "moment": "^2.29.2"
+  }
+}
