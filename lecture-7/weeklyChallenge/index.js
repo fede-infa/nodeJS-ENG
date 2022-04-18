@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const PORT = 8080;
 
-const visits = {
+const views = {
     items: 0,
     itemRandom: 0
 };
@@ -33,20 +33,20 @@ app.get('/items', (req, res) =>{
         products: products,
         totalProducts: products.length 
     }];
-    ++visits.items;
+    ++views.items;
     res.json(outputData);
 });
 
 app.get('/item-random', (req, res) =>{
     const products = getProducts();
-    ++visits.itemRandom;
+    ++views.itemRandom;
     res.json({
         product: products[getRandomNumber(0,products.length)]
     });
 });
 
-app.get('/visits', (req, res) =>{
-    res.json(visits)
+app.get('/views', (req, res) =>{
+    res.json(views)
 })
 
 

@@ -1,0 +1,81 @@
+[
+	{
+		"title": "Mate",
+		"price": 500,
+		"thumbnail": "https://pagina.com/mate.jpg",
+		"id": 1
+	},
+	{
+		"title": "Guitarra",
+		"price": 55000,
+		"thumbnail": "https://pagina.com/guitarra.jpg",
+		"id": 2
+	},
+	{
+		"title": "Tenedor",
+		"price": 170,
+		"thumbnail": "https://pagina.com/tenedor.jpg",
+		"id": 3
+	},
+	{
+		"title": "Cuchillo",
+		"price": 220,
+		"thumbnail": "https://pagina.com/cuchillo-tramontina.jpg",
+		"id": 4
+	},
+	{
+		"title": "TV",
+		"price": 20000,
+		"thumbnail": "https://pagina.com/tv-led.jpg",
+		"id": 5
+	},
+	{
+		"title": "Lapiz JSON",
+		"price": 125,
+		"thumbnail": "https://fotoJSON.com/lapiz.jpg",
+		"id": 6
+	}
+][
+	{
+		"title": "Mate",
+		"price": 500,
+		"thumbnail": "https://pagina.com/mate.jpg",
+		"id": 1
+	},
+	{
+		"title": "Guitarra",
+		"price": 55000,
+		"thumbnail": "https://pagina.com/guitarra.jpg",
+		"id": 2
+	},
+	{
+		"title": "Tenedor",
+		"price": 170,
+		"thumbnail": "https://pagina.com/tenedor.jpg",
+		"id": 3
+	},
+	{
+		"title": "Cuchillo",
+		"price": 220,
+		"thumbnail": "https://pagina.com/cuchillo-tramontina.jpg",
+		"id": 4
+	},
+	{
+		"title": "TV",
+		"price": 20000,
+		"thumbnail": "https://pagina.com/tv-led.jpg",
+		"id": 5
+	},
+	{
+		"title": "Lapiz JSON",
+		"price": 125,
+		"thumbnail": "https://fotoJSON.com/lapiz.jpg",
+		"id": 6
+	},
+	{
+		"title": "Phone",
+		"price": 230,
+		"thumbnail": "https://pagina.com/phone.jpg",
+		"id": 7
+	}
+]
