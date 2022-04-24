@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Handlebar testing</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+    <h1>Personal data</h1>
+    <div></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script>
+        let template = Handlebars.compile(`<ul>
+                <li>{{person.firstName}}</li> 
+                <li>{{person.lastName}}</li> 
+                <li>{{person.age}}</li> 
+                <li>{{person.email}}</li> 
+                <li>{{person.phoneNumber}}</li>
+            </ul>`);
+        let HTML = template({person: {
+            firstName: "Fede",
+            lastName: "Infa",
+            age: "29",
+            email: "infantino.fede@gmail.com",
+            phoneNumber: "44 288 91822"
+        },
+    });
+
+        document.querySelector('div').innerHTML = HTML;
+
+    </script>
+</body>
+
+</html>

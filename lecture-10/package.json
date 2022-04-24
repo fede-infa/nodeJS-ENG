@@ -1,0 +1,15 @@
+{
+  "name": "lecture-10",
+  "version": "1.0.0",
+  "description": "- Reads a template (pseudo HTML), dynamic information can be inserted\r - The syntax depends on the template engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "hbs": "^4.2.0"
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    {{> header}}
+
+<body>
+    {{> navbar}}
+
+    {{#if products}}
+    <h1>Product list</h1>
+
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Thumbnail</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{!-- It creates a row for each product --}}
+            {{#each products}}
+            <tr>
+                <th scope="row"> {{this.id}} </th>
+                <th> {{this.title}} </th>
+                <th> {{this.price}} </th>
+                <th> <img src={{this.thumbnail}} width="30" class="img-thumbnail"> </th>
+            </tr>
+            {{!-- End #each --}}
+            {{/each}} 
+        </tbody>
+    </table>
+    {{else}}
+    <div class="alert alert-danger">
+        <strong>Alert!</strong> There are no products
+    </div>
+    {{/if}}
+    
+</body>
+</html>
