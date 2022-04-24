@@ -1,0 +1,74 @@
+[
+	{
+		"title": "Mate",
+		"price": 500,
+		"thumbnail": "../public/testing-image.jpg",
+		"id": 1
+	},
+	{
+		"title": "Phone X",
+		"price": 230,
+		"thumbnail": "../public/testing-image.jpg",
+		"id": "2"
+	},
+	{
+		"title": "Barbijo",
+		"price": 350,
+		"thumbnail": "../public/testing-image.jpg",
+		"id": "3"
+	},
+	{
+		"title": "Ropero",
+		"price": 35000,
+		"thumbnail": "../public/testing-image.jpg",
+		"id": "4"
+	},
+	{
+		"title": "Espada",
+		"price": 15000,
+		"thumbnail": "../public/testing-image.jpg",
+		"id": 5
+	},
+	{
+		"title": "Moto",
+		"price": "500000",
+		"thumbnail": "../public/testing-image.jpg",
+		"id": 6
+	},
+	{
+		"title": "Prueba nuevo formulario",
+		"price": "1299.99",
+		"thumbnail": "../public/testing-image.jpg",
+		"id": 8
+	},
+	{
+		"title": "Espada",
+		"price": 15000,
+		"thumbnail": "../public/testing-image.jpg",
+		"id": 9
+	},
+	{
+		"title": "Test424",
+		"price": "211",
+		"thumbnail": "../public/testing-image.jpg",
+		"id": 10
+	},
+	{
+		"title": "Plate",
+		"price": "0.99",
+		"thumbnail": "../public/testing-image.jpg",
+		"id": 11
+	},
+	{
+		"title": "Zitrone",
+		"price": "0.89",
+		"thumbnail": "/public/testing-image.jpg",
+		"id": 12
+	},
+	{
+		"title": "Kässe",
+		"price": "2.34",
+		"thumbnail": "/public/testing-image.jpg",
+		"id": 13
+	}
+]
