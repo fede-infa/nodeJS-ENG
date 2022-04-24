@@ -1,0 +1,56 @@
+[
+	{
+		"title": "Mate",
+		"price": 500,
+		"thumbnail": "https://pagina.com/mate.jpg",
+		"id": 1
+	},
+	{
+		"title": "Phone X",
+		"price": 230,
+		"thumbnail": "https://pagina.com/phone.jpg",
+		"id": "2"
+	},
+	{
+		"title": "Barbijo",
+		"price": 350,
+		"thumbnail": "http://url.com/barbijo.jpg",
+		"id": "3"
+	},
+	{
+		"title": "Ropero",
+		"price": 35000,
+		"thumbnail": "http://url.com/ropero.jpg",
+		"id": "4"
+	},
+	{
+		"title": "Espada",
+		"price": 15000,
+		"thumbnail": "http://url.com/espada.jpg",
+		"id": 5
+	},
+	{
+		"title": "Moto",
+		"price": "500000",
+		"thumbnail": "",
+		"id": 6
+	},
+	{
+		"title": "Prueba nuevo formulario",
+		"price": "1299.99",
+		"thumbnail": "url/nuevo-formulario",
+		"id": 8
+	},
+	{
+		"title": "Espada",
+		"price": 15000,
+		"thumbnail": "http://url.com/espada.jpg",
+		"id": 9
+	},
+	{
+		"title": "Test424",
+		"price": "211",
+		"thumbnail": "2144.com",
+		"id": 10
+	}
+]
