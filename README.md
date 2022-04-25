@@ -9,3 +9,4 @@
 - Static resources, Middlewares
 - Templates engines (hbs, pug, ejs)
 - Sockets (TCP)
+- Babel
