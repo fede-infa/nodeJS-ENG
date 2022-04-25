@@ -1,6 +1,7 @@
-class File{
+class ProductFile{
     fs = require('fs');
-    constructor(file){
+    file: string = '';
+    constructor(file:string){
         this.file = `${__dirname}/${file}`
     }
 
@@ -13,7 +14,7 @@ class File{
         }
     }
 
-    async create(product){
+    async create(product:{title: string, price: number, thumbnail:string, id:string}){
         const products = await this.read();
         product.id = products[products.length -1].id + 1;
         products.push(product);
@@ -26,10 +27,9 @@ class File{
         }
     }
 
-    async update(updatedProduct){
+    async update(updatedProduct:{title: string, price: number, thumbnail:string, id:string}){
         let products = await this.read();
-        const indexOfProduct = products.findIndex( product => product.id == updatedProduct.id);
-        console.log(indexOfProduct);
+        const indexOfProduct = products.findIndex( (product: {title: string, price: number, thumbnail:string, id:string}) => product.id == updatedProduct.id);
         products.splice(indexOfProduct, 1, updatedProduct);
         try {
             if(indexOfProduct != -1){
@@ -44,11 +44,11 @@ class File{
 
     }
 
-    async delete(id){
+    async delete(id:string){
         let products = await this.read();
-        const indexToDelete = products.findIndex( product => product.id == id);
+        const indexToDelete = products.findIndex( (product: {title: string, price: number, thumbnail:string, id:string}) => product.id == id);
         const deletedProduct = products[indexToDelete];
-        products = products.filter( product => product.id != id);
+        products = products.filter( (product: {title: string, price: number, thumbnail:string, id:string}) => product.id != id);
         try{
             if(deletedProduct){
                 await this.fs.promises.writeFile(this.file, JSON.stringify(products, null, '\t'));
@@ -63,4 +63,4 @@ class File{
     }
 }
 
-module.exports = new File('products.txt');
+module.exports = new ProductFile('products.txt');

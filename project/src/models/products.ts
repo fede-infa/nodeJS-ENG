@@ -1,5 +1,8 @@
 class Product{
-    constructor(title, price, thumbnail){
+    title: string;
+    price: number;
+    thumbnail: string;
+    constructor(title: string, price: number, thumbnail: string){
         this.title = title,
         this.price = price,
         this.thumbnail = thumbnail
