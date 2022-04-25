@@ -14,7 +14,7 @@ class ProductFile{
         }
     }
 
-    async create(product:{title: string, price: number, thumbnail:string, id:string}){
+    async create(product:{title: string, price: number, thumbnail:string, id:number}){
         const products = await this.read();
         product.id = products[products.length -1].id + 1;
         products.push(product);
@@ -27,9 +27,9 @@ class ProductFile{
         }
     }
 
-    async update(updatedProduct:{title: string, price: number, thumbnail:string, id:string}){
+    async update(updatedProduct:{title: string, price: number, thumbnail:string, id:number}){
         let products = await this.read();
-        const indexOfProduct = products.findIndex( (product: {title: string, price: number, thumbnail:string, id:string}) => product.id == updatedProduct.id);
+        const indexOfProduct = products.findIndex( (product: {title: string, price: number, thumbnail:string, id:number}) => product.id == updatedProduct.id);
         products.splice(indexOfProduct, 1, updatedProduct);
         try {
             if(indexOfProduct != -1){
@@ -44,11 +44,11 @@ class ProductFile{
 
     }
 
-    async delete(id:string){
+    async delete(id:number){
         let products = await this.read();
-        const indexToDelete = products.findIndex( (product: {title: string, price: number, thumbnail:string, id:string}) => product.id == id);
+        const indexToDelete = products.findIndex( (product: {title: string, price: number, thumbnail:string, id:number}) => product.id == id);
         const deletedProduct = products[indexToDelete];
-        products = products.filter( (product: {title: string, price: number, thumbnail:string, id:string}) => product.id != id);
+        products = products.filter( (product: {title: string, price: number, thumbnail:string, id:number}) => product.id != id);
         try{
             if(deletedProduct){
                 await this.fs.promises.writeFile(this.file, JSON.stringify(products, null, '\t'));

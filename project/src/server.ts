@@ -20,8 +20,8 @@ server.on('error', (err: ErrorCallback) =>{
 });
 
 // My modules
-const file = require('./src/models/file');
-const Product = require('./src/api/products');
+const file = require('./models/file');
+const Product = require('./api/products');
 
 // App config
 app.use(express.json());
@@ -32,13 +32,14 @@ app.set('view engine', 'ejs'); // EJS template engine
 
 // Index.html
 app.get('/', (req: Request, res: Response) =>{
-    res.render('index');
+    res.render(`${__dirname}/views/index`);
 });
 
 // Products table
 app.get('/products/view', async(req: Request, res: Response) =>{
     const productList = await file.read();
-    res.render('products', {products: productList});
+    console.log(file);
+    res.render(`${__dirname}/views/products`, {products: productList});
 });
 
 // Socket connection
