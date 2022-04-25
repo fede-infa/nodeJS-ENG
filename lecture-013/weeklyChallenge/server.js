@@ -8,6 +8,9 @@ const http = require('http');
 const server = http.createServer(app);
 const { Server } = require('socket.io')
 const io = new Server(server);
+/*
+const httpServer = require("http").createServer(app);
+const io = require("socket.io")(httpServer, options); */
 
 // Server express
 const PORT = 8080;
