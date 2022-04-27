@@ -1,7 +1,13 @@
-const knex = require('knex');
+/* const knex = require('knex');
 const knexFile = require('../db/knexfile');
+const db = knex(knexFile.development) */
 
-const db = knex(knexFile.development)
+const db = require('knex')({
+  client: 'sqlite3', // or 'better-sqlite3'
+  connection: {
+    filename: "./mydb.sqlite"
+  }
+});
 
 db.schema.createTable('users', table =>{
     table.increments('id');
