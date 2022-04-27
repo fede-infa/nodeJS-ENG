@@ -7,3 +7,6 @@ Is a SQL query builder designed to be flexible & portable. It features:
 - streaming queries
 - both a promise and callback API
 - a thorough test suite
+
+## SQLite3
+Really good for cellphones
