@@ -1,28 +1,24 @@
 const path = require('path');
 
 module.exports = {
-    //building mode
-    mode: 'production',
-    // entry files
-    entry: './src/index.ts',
-    // target
-    target: 'node',
-    // output bundles location
-    output: {
-        path: path.resolve(__dirname + '/dist'),
-        filename: 'main.js'
+    mode: 'production', // could be development
+    entry: './src/index.ts', // Entry file to be executed in the bundler webpack
+    target: 'node', //Language
+    output: { // File and file name to be generated
+        path: path.resolve(__dirname + '/dist'), // Folder route
+        filename: 'main.js' // File name
     },
     // file resolutions
-    resolve: {
+    resolve: { // Type of files to bundle
         extensions: ['.ts', '.js']
     },
     // loaders
     module: {
         rules: [
             {
-                test: /\.tsx?/,
-                use: 'ts-loader',
-                exclude: /node_modules/
+                test: /\.tsx?/, // All files that ends with .ts and .tsx
+                use: 'ts-loader', // Which loader should be applied
+                exclude: /node_modules/ // Which folder and sub-folders should be excluded
             }
         ]
     }

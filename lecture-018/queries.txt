@@ -1,0 +1,14 @@
+// Show databases
+show dbs;
+
+// Select a DB, if it doesn't exists it will be created
+use mibase
+
+// show all the collections
+show collections
+
+// It insert a document
+db.personas.insert({clave: valor})
+
+// Works as a Select *
+db.personas.find()
