@@ -1,0 +1,22 @@
+{
+  "name": "minichallenge",
+  "description": "1. Actualizar el dni del estudiante Lucas Blanco a 20355875\r 2. Agregar un campo 'ingreso' a todos los documentos con el valor false\r 3. Modificar el valor de 'ingreso' a true para todos los estudiantes que pertenezcan al curso 1A\r 4. Listar los estudiantes que aprobaron (hayan sacado de 4 en adelante) sin los campos de _id y __v\r 5. Listar los estudiantes que posean el campo 'ingreso' en true sin los campos de _id y __v\r 6. Borrar de la colección de estudiantes los documentos cuyo campo 'ingreso' esté en true\r 7. Listar el contenido de la colección estudiantes utilizando la consola, imprimiendo en cada caso los datos almacenados (sin el campo __v) junto a su fecha de creación obtenida del ObjectID en formato YYYY/MM/DD HH:mm:SS. \r Por ejemplo: \r {\"_id\":\"604df61b5e39a84ba41313e4\",\"nombre\":\"Fabio\",\"apellido\":\"Pieres\",\"edad\":39,\"dni\":\"4315388\",\"curso\":\"1B\",\"nota\":9,\"ingreso\":false} -> Fecha creación:  14/3/2021 08:40:11\r 8. Implementar estas funciones utilizando Promises en Mongoose con sintaxis async/await, utilizando la importación en formato ES Modules (import)\r 9. Verificar la información de la base 'colegio' a través de Robo 3T",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon src/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "1.7.4",
+    "cors": "2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "6.3.1"
+  },
+  "devDependencies": {
+    "dotenv": "16.0.0"
+  }
+}
