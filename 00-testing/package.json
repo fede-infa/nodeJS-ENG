@@ -1,0 +1,18 @@
+{
+  "name": "00-testing",
+  "version": "1.0.0",
+  "main": "functions.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jest": "28.0.3"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
