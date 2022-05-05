@@ -22,4 +22,7 @@ describe('Testing of calculator function', () =>{
     it('Should return false with % as operator', () =>{
         expect(calculator('%',2,5)).toBe(false);
     })
+    it('Should return false with only 1 number', () =>{
+        expect(calculator('+',5)).toBe(false);
+    })
 })
