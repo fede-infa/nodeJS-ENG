@@ -12,3 +12,9 @@
 - Babel
 - Webpack
 - KNEX
+- DBaaS
+- MongoDB, MongoAtlas, Mongoose
+- Firebase
+- Cookies & Sessions
+- Filestore (as cookies/sessions)
+- REDIS
