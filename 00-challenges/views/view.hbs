@@ -1,0 +1,32 @@
+<style>
+    .table td, .table th {
+        vertical-align: middle;
+    }
+    h1 {
+        color: blue;
+    }
+    hr {
+        background-color: #ddd;
+    }
+    .jumbotron {
+        min-height: 100vh;
+    }
+</style>
+
+<div class="jumbotron">
+    <h1>Products view</h1>
+    <br>
+
+    {{#if isProduct}} 
+        <div class="table-responsive">
+            <table class="table table-dark">
+                <tr> <th>Title</th> <th>Price</th> <th>Image</th></tr>
+                {{#each productos}}
+                    <tr> <td>{{this.title}}</td> <td>${{this.price}}</td> <td><img width="50" src={{this.thumbnail}} alt="not found"></td> </tr>
+                {{/each}}
+            </table>
+        </div>
+    {{else}}  
+        <h3 class="alert alert-warning">There are no products</h3>
+    {{/if}}
+</div>
