@@ -1,7 +1,7 @@
 import MessageMongoDB from '../db/message.js'
 
 /* --------------------- Message Normalization ---------------------------- */
-import { normalize, schema, denormalize } from 'normalizr'
+/* import { normalize, schema, denormalize } from 'normalizr'
 // import util from 'util'
 
 
@@ -16,7 +16,7 @@ const schemaMenssage = new schema.Entity('post', {
 // Post schema normalizr
 const schemaPost = new schema.Entity('posts', {
   mensajes: [schemaMenssage]
-},{idAttribute: 'id'})
+},{idAttribute: 'id'}) */
 /* ---------------------------------------------------------------------------- */
 
 class Message {
@@ -27,7 +27,7 @@ class Message {
 
     async getAll() {
         try {
-            let messages = await this.menssageMongoDB.read()
+            /* let messages = await this.messageMongoDB.read()
             print(messages)
             let messageId = { 
                 id: 'messages', 
@@ -37,7 +37,8 @@ class Message {
             print(messageId)
             let messageIdN = normalize(messageId, schemaPost)
             print(messageIdN)
-            return messageIdN;
+            return messageIdN; */
+            return this.messageMongoDB.read();
         }
         catch {
             return []

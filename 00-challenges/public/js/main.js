@@ -9,7 +9,6 @@ form.addEventListener('submit', e => {
     e.preventDefault()
 
     const data = {title: form[0].value, price: form[1].value, thumbnail: form[2].value}
-    //console.log(data)
 
     fetch('/api/product', {
         headers: {
