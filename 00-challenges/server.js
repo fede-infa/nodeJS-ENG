@@ -3,7 +3,23 @@ import http from 'http'
 import cookieParser from 'cookie-parser'
 import session from 'express-session'
 
+/* ----------------------- */
+/* --- PASSPORT CONFIG ---*/
+/* ----------------------- */
+const passport = require('passport');
+const LocalStrategy = require('passport-local');
+const compression = require('compression');
+const morgan = require('morgan');
+
+passport.use(new LocalStrategy( function verify(username, password, cb){
+    
+
+}))
+
 const app = express()
+
+app.use(morgan('dev'));
+app.use(compression());
 
 app.use(cookieParser())
 app.use(session({
@@ -15,6 +31,7 @@ app.use(session({
         maxAge: 60000
     }
 }))
+app.use(passport.session()); // || app.use(passport.authenticate('session'));
 
 const getSessionName = req => req.session.name? req.session.name: ''
 
