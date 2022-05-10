@@ -1,6 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const bcrypt = require('bcrypt');
 
 const app = express();
 app.use(cookieParser());
@@ -28,7 +29,13 @@ app.post('/signup', (req, res) =>{
 
     if(existUser) res.status(400).send(`User is already created`);
 
+    // Hash vs Encrypt
+    /*
+        Hash can not go backwards vs Encryptation can
+     */
+    user.password = bcrypt.hashSync(user.password, 12);
     users.push(user);
+    console.log(users);
     res.json({
         status: 'User created',
         user: user
@@ -39,9 +46,9 @@ app.post('/login', (req, res) =>{
     const {username, password} = req.body;
     const existUser = users.find( u => u.username === username);
 
-    if(!existUser || existUser.password != password) res.status(400).send('Invalid credentials');
+    if(!existUser || !bcrypt.compareSync(password, existUser.password)) res.status(400).send('Invalid credentials');
 
-    if(existUser.password === password){
+    if(bcrypt.compareSync(password, existUser.password)){
         req.session.user = username;
         res.send('You are now being redirected');
     }
