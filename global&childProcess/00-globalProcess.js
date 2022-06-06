@@ -9,3 +9,8 @@ function example1(){
     example2()
     return;
 }
+
+console.log('----------- Process Events -----------')
+console.log = (d) =>{
+    process.stdout.write(d + '\n')
+}

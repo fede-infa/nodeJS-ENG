@@ -7,9 +7,11 @@ import MongoStore from 'connect-mongo'
 /* -------------- PASSPORT ----------------- */
 import passport from 'passport';
 import { Strategy as FacebookStrategy } from 'passport-facebook'
+// require('dotenv').config();
+import 'dotenv/config'
 
-const FACEBOOK_CLIENT_ID = 'iiiiiiiiiiiiiii';
-const FACEBOOK_CLIENT_SECRET = 'ssssssssssssssssssssssssssssssss';
+const FACEBOOK_CLIENT_ID = process.env.FACEBOOK_CLIENT_ID;
+const FACEBOOK_CLIENT_SECRET = process.env.FACEBOOK_CLIENT_SECRET;
 
 passport.use(new FacebookStrategy({
   clientID: FACEBOOK_CLIENT_ID,
